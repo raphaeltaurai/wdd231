@@ -1,0 +1,119 @@
+:root {
+    --headingsbckgrnd: #005f73;
+    --black: #000;
+    --filterbttns: #650000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /*header, body, footer*/
+}
+
+header {
+    display:flex;
+    flex-direction: column;
+    color: var(--black);
+    background-color: var(--headingsbckgrnd);
+    padding: 1rem 0 0 0;
+    grid-column: 1/-1; /*spans all columns*/
+    text-align: left;
+}
+
+.profile {
+    display:flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+}
+
+.profile img {
+    width: 70px;
+    height: 80px;
+    border-radius: 25%;
+    padding: 0 5px 2px 0;
+    position: sticky;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    -ms-border-radius: 25%;
+    -o-border-radius: 25%;
+}
+
+.nav-bar{
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: space-around; /* Space between navigation items */
+    background-color: var(--black);
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    align-items: center;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;  /* Left section 75%, right section 25% */
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+.card {
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the h2 inside the card */
+.card h2 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+.card img{
+    width: 100%;
+}
+
+.caption{
+    text-align: center;
+}
+
+#cert {
+    grid-column: 1/-1;
+}
+
+footer{
+    background-color: var(--headingsbckgrnd);
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
