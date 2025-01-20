@@ -9,6 +9,8 @@
     <title>WDD 231 - Dynamic Web Fundamentals - Raphael Shawn Taurai</title>
     <link rel="stylesheet" href="styles/base.css">
     <script type="module" src="scripts/getdates.js" defer></script>
+    <script type="module" src="scripts/home.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -16,8 +18,9 @@
             <img src="images/shawn-pic.jpg" alt="Profile Picture">
             <h1>Raphael Shawn Taurai</h1>
         </div>
+        <a id="menu" href="#" aria-expanded="false" aria-label="Toggle navigation"></a>
         <nav class="nav-bar">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active" >Home</a>
             <a href="">Chamber</a>
             <a href="www.linkedin.com/in/raphaelshawntaurai">LinkedIn</a>
             <a href="">GitHub Profile</a>
@@ -26,9 +29,11 @@
     <main>
         <section class="card">
             <h2>Course Work</h2>
-            <ul>
-                <li></li>
-            </ul>
+                <ul class="courseworklst">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
         </section>
         <section class="card">
             <h2>Kwekwe, Zimbabwe</h2>
@@ -45,6 +50,9 @@
             <div class="courses">
                 <!--Dynamic course cards will be injected here -->
              </div>
+             <div class="credits">
+                Total Credits: <span id="total-credits">0</span>
+              </div>
         </section>
     </main>
     <footer>

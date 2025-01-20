@@ -12,23 +12,27 @@
 }
 
 html{
-    height: 100%;
     box-sizing: border-box;
 }
 
 body {
     display: grid;
     grid-template-rows: auto 1fr auto; /*header, body, footer*/
+   
 }
 
 header {
     display:flex;
     flex-direction: column;
-    color: var(--black);
+    color: white;
     background-color: var(--headingsbckgrnd);
     padding: 1rem 0 0 0;
     grid-column: 1/-1; /*spans all columns*/
     text-align: left;
+}
+
+main{
+    padding: 0 2rem 0 2rem;
 }
 
 .profile {
@@ -50,35 +54,64 @@ header {
     -o-border-radius: 25%;
 }
 
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0  1rem;
+    background-color:var(--headingsbckgrnd);
+    color: var(--black) ;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    
+}
+
+#menu::before {
+    content: '≡'; /* Hamburger icon */
+}
+
+#menu.show::before {
+    content: "🔽"; /* Changes to dropdown symbol when clicked */
+}
+
 .nav-bar{
-    display: flex;
-    flex: 1 1 100%;
-    justify-content: space-around; /* Space between navigation items */
+    display: none;
+    flex-direction: column;
+    text-align: center;
     background-color: var(--black);
     padding: 1rem;
-    margin: 1rem 0 0 0;
-    align-items: center;
+}
+
+
+.nav-bar.show{
+    display:flex;
 }
 
 .nav-bar a{
+    display: block;
     color: white;
+    text-align: center;
+    padding: 1rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-weight: bold
 }
 
-.nav-bar a:hover {
-    text-decoration: underline;
+nav a:hover {
+    text-decoration: underline double;
+    background-color: white;
+    color: var(--black);
 }
 
-
-main{
-    display: grid;
-    grid-template-columns: 3fr 1fr;  /* Left section 75%, right section 25% */
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    padding: 2rem;
+.nav-bar.show {
+    display: flex;
 }
 
+.nav-bar a.active{
+    color: peru;
+}
 
 .card {
     border-radius: 10px;
@@ -96,7 +129,7 @@ main{
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
-    background-color: black;
+    background-color: var(--headingsbckgrnd);
 }
 
 .card img{
@@ -111,9 +144,131 @@ main{
     grid-column: 1/-1;
 }
 
+.filters{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.courseworklst{
+    margin: 0 0 0 3rem;
+}
+
+/*filter buttons design*/
+.filters button{
+    background-color: var(--black);
+    color: white;
+    border-radius: 25%;
+    width: 6rem;
+}
+
+.filters button.selected {
+    background-color: blue;
+    color: white;}
+
+.courses{
+    display: block;
+}
+
+.course-card{
+    margin: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+  .course-card.completed {
+    background-color: #3181c7b2; /* Completed - Brownish */
+  }
+
+  .course-card.completed::before {
+    content: '✔'
+  }
+  .course-card.incomplete {
+    background-color: #d9534f; /* Incomplete - Red */
+  }
+
+  .credits {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
 footer{
     background-color: var(--headingsbckgrnd);
+    color: white;
     text-align: center;
     font-weight: bold;
     padding: 1rem;
 }
+
+.credits{
+    margin: 10px;
+    color: green;
+    font-weight: bolder;
+}
+
+
+@media (min-width: 768px){
+
+    main{
+        display: grid;
+        grid-template-columns: 3fr 1fr;  /* Left section 75%, right section 25% */
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #menu{
+        display: none;
+    }
+
+
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; /* Space between navigation items */
+        background-color: var(--black);
+        padding: 1rem;
+        margin: 1rem 0 0 0;
+        align-items: center;
+    }
+    
+    .nav-bar a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-bar a:hover {
+        text-decoration: underline;
+    }
+
+     
+    .filters {
+        gap: 50px;
+    }
+
+    .course-card {
+        text-align: center;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        color: white;
+        width: 120px;
+      }
+
+    .courses{
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
