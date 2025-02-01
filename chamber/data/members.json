@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Kanyama Textiles",
+        "address": "123 Market St, Kanyama",
+        "phone": "+260-123-456-789",
+        "website": "https://kanyamatextiles.com",
+        "image": "images/kanyama-textiles.jpg"
+    },
+    {
+        "name": "Zambezi Coffee",
+        "address": "456 Coffee Lane, Kanyama",
+        "phone": "+260-987-654-321",
+        "website": "https://zambezicoffee.com",
+        "image": "images/zambezi-coffee.jpg"
+    }
+]

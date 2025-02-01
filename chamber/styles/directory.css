@@ -1,0 +1,117 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #005f73;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+#hamburger-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    #hamburger-btn {
+        display: block;
+    }
+    
+    #primary-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #005f73;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    #primary-nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* View Toggle */
+.view-toggle {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Member List */
+#member-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px gray;
+    width: 30%;
+}
+
+/* Grid and List Views */
+.list .member-card {
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .member-card {
+        width: 100%;
+    }
+}
