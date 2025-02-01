@@ -1,0 +1,109 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Card Container */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Card Styling */
+section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Typography */
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Image Styling */
+img {
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    header h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    p { font-size: 0.95em; }
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 1.6em; }
+    h2 { font-size: 1.3em; }
+    p { font-size: 0.9em; }
+}
+
+@media (max-width: 576px) {
+    header h1 { font-size: 1.5em; }
+    h2 { font-size: 1.2em; }
+    p { font-size: 0.85em; }
+    #cards { grid-template-columns: 1fr; }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
