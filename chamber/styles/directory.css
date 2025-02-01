@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    text-align: center;
 }
 
 .container {
@@ -42,6 +43,14 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+}
+
+footer{
+    background-color: #005f73;
+    padding: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* Responsive Navigation */
