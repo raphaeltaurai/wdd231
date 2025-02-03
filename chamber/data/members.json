@@ -1,16 +1,73 @@
 [
     {
-        "name": "Kanyama Textiles",
-        "address": "123 Market St, Kanyama",
-        "phone": "+260-123-456-789",
-        "website": "https://kanyamatextiles.com",
-        "image": "images/kanyama-textiles.jpg"
-    },
-    {
-        "name": "Zambezi Coffee",
-        "address": "456 Coffee Lane, Kanyama",
-        "phone": "+260-987-654-321",
-        "website": "https://zambezicoffee.com",
-        "image": "images/zambezi-coffee.jpg"
-    }
+        "name": "Dusty Busters Ltd",
+        "address": "123 Msasa, Harare, Zimbabwe",
+        "phone": "+263780995944",
+        "website": "https://dustbusters.com",
+        "image": "cleaners.png",
+        "membership_level": 3,
+        "industry": "Cleaning Services",
+        "established_year": 2024
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      },
+      {
+        "name": "Tech Innovators Ltd",
+        "address": "123 Silicon Valley, CA, USA",
+        "phone": "+1-800-555-0101",
+        "website": "https://techinnovators.com",
+        "image": "tech_innovators.png",
+        "membership_level": 3,
+        "industry": "Technology",
+        "established_year": 2005
+      }
+
 ]
