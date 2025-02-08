@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.toggle("open");
     });
 
-    // Load members and spotlight
+    // Load members and spotlight members
     fetchMembers();
+    fetchSpotlightMembers();
 
     // View toggle functionality
     document.getElementById("grid-view").addEventListener("click", () => {
@@ -28,12 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function fetchMembers() {
     const response = await fetch("data/members.json");
     const members = await response.json();
-    
-    // Display all members
     displayMembers(members);
-    
-    // Display spotlight members
-    displaySpotlight(members);
 }
 
 function displayMembers(members) {
@@ -55,38 +51,39 @@ function displayMembers(members) {
     });
 }
 
-function displaySpotlight(members) {
-    const spotlightContainer = document.getElementById("spotlight");
+// Fetch and display spotlight members
+async function fetchSpotlightMembers() {
+    const response = await fetch("data/members.json");
+    const members = await response.json();
+    const spotlightContainer = document.getElementById("spotlight-members");
     spotlightContainer.innerHTML = "";
 
-    // Filter for Gold and Silver members
-    const spotlightMembers = members.filter(member => 
-        member.membershipLevel === "Gold" || member.membershipLevel === "Silver"
-    );
-
-    // Shuffle and select up to 3 members
-    const selectedSpotlights = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Filter for gold or silver members
+    const eligibleMembers = members.filter(member => member.membership === "Gold" || member.membership === "Silver");
+    
+    // Shuffle and select 2-3 members randomly
+    const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
+    const selectedSpotlights = shuffled.slice(0, 3);
 
     selectedSpotlights.forEach(member => {
-        const card = document.createElement("div");
-        card.classList.add("spotlight-card");
+        const spotlightCard = document.createElement("div");
+        spotlightCard.classList.add("spotlight-card");
 
-        card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" width="120">
-            <h3>${member.name}</h3>
-            <p><strong>Level:</strong> ${member.membershipLevel}</p>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>Address:</strong> ${member.address}</p>
+        spotlightCard.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" width="150">
+            <h2>${member.name}</h2>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
             <a href="${member.website}" target="_blank">Visit Website</a>
+            <p class="membership-level">${member.membership} Member</p>
         `;
-
-        spotlightContainer.appendChild(card);
+        spotlightContainer.appendChild(spotlightCard);
     });
 }
 
 const apiKey = "d7b550e8f4fcd45a1601942facd66407"; // OpenWeatherMap API key
-const city = "Kwekwe";
-const countryCode = "ZW";
+const city = "Kwekwe"; // chamber's location
+const countryCode = "ZW"; // country code
 
 async function fetchWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
@@ -99,7 +96,7 @@ async function fetchWeather() {
             <h3>Current Weather</h3>
             <p>Temperature: ${data.main.temp}°C</p>
             <p>Condition: ${data.weather[0].description}</p>
-            <img src="${iconsrc}" alt="${data.weather[0].description}">
+            <img src=${iconsrc} alt=${data.weather[0].description}>
         `;
     } catch (error) {
         console.error("Weather data fetch failed:", error);
