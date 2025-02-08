@@ -9,6 +9,7 @@ body {
 
 .page-name{
     text-align: left;
+    margin-bottom: 10px;
 }
 
 
@@ -38,7 +39,7 @@ h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
+    display: block;
 }
 
 nav ul li {
@@ -46,8 +47,12 @@ nav ul li {
 }
 
 .nav-links a {
-    color: white;
+    display: block;
+    color: #fff; 
+    text-align: center;
+    padding: 10px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Wayfinding: Highlight active page */
@@ -148,10 +153,6 @@ footer {
         margin: 5px 0;
     }
 
-    .breadcrumb .aa.active {
-        font-weight: bold;
-        background-color: green;
-    }
 
     .hero{
         margin-top: 200px;
@@ -228,6 +229,33 @@ button {
 
     .breadcrumb {
         justify-content: space-around;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+        /* Ensure active state remains visible */
+    .nav-links a.active:hover {
+        background-color: transparent;
+    }
+
+    /* Hover effect for navigation */
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 5px;
     }
 
     #cards{
