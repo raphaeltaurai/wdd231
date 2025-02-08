@@ -26,23 +26,45 @@
 <body>
     <header>
         <div class="container">
-            <h1>Kanyama Chamber of Commerce Directory</h1>
+            <div class="page-name">
+                <h1>Kanyama</h1>
+                <h3>Chamber of Commerce</h3>
+            </div>
+            
             <button id="hamburger-btn" aria-label="Menu">☰</button>
             <nav id="primary-nav">
-                <ul>
-                    <li class="nav-links"><a href="index.html">Home</a></li>
-                    <li class="nav-links"><a href="discover.html">Discover</a></li>
-                    <li class="nav-links"><a href="directory.html">Business Directory</a></li>
-                    <li class="nav-links"><a href="join.html">Join</a></li>
-                    <li class="nav-links"><a href="about.html">About</a></li>
-                    <li class="nav-links"><a href="contact.html">Events</a></li>
-                    <li class="nav-links"><a href="podcast.html">Podcast</a></li>
+                <ul class="breadcrumb">
+                    <li class="nav-links"><a class="aa" href="index.html">Home</a></li>
+                    <li class="nav-links"><a class="aa" href="directory.html">Directory</a></li>
+                    <li class="nav-links"><a class="aa" href="join.html">Join</a></li>
+                    <li class="nav-links"><a class="aa" href="discover.html">Discover</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <main>
+        <div class="hero">
+            <img src="/images/vicfalls.webp" alt="vicfalls" id="hero-img" width="100%" height="360px">
+            <a href="#" id="hero-button"> Key notes</a>
+        </div>
+        
+        <section id="city-details">
+            <h2>Home</h2>
+            <div id="cards">
+                <div class="card">
+                    <h3>Events</h3>
+                </div>
+                <div class="card">
+                    <h3>Current Weather</h3>
+                    <!-- Will populate with JS-->
+                </div>
+                <div class="card">
+                    <h3>Weather Forecast</h3>
+                    <!--- will populate with JS-->
+                </div>
+            </div>
+        </section>
         <div class="view-toggle">
             <button id="grid-view">Grid View</button>
             <button id="list-view">List View</button>
