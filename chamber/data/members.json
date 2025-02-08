@@ -1,73 +1,72 @@
 [
-    {
-        "name": "Dusty Busters Ltd",
-        "address": "123 Msasa, Harare, Zimbabwe",
-        "phone": "+263780995944",
-        "website": "https://dustbusters.com",
-        "image": "cleaners.png",
-        "membership_level": 3,
-        "industry": "Cleaning Services",
-        "established_year": 2024
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      },
-      {
-        "name": "Tech Innovators Ltd",
-        "address": "123 Silicon Valley, CA, USA",
-        "phone": "+1-800-555-0101",
-        "website": "https://techinnovators.com",
-        "image": "tech_innovators.png",
-        "membership_level": 3,
-        "industry": "Technology",
-        "established_year": 2005
-      }
-
+  {
+      "name": "Dusty Busters Ltd",
+      "address": "123 Msasa, Harare, Zimbabwe",
+      "phone": "+263780995944",
+      "website": "https://dustbusters.com",
+      "image": "cleaners.png",
+      "membership_level": 1,
+      "industry": "Cleaning Services",
+      "established_year": 2024
+  },
+  {
+      "name": "Tech Innovators Ltd",
+      "address": "123 Queen Valley, Kwekwe, Zimbabwe",
+      "phone": "+263 56789002",
+      "website": "https://techinnovators.com",
+      "image": "tech_innovators.png",
+      "membership_level": 3,
+      "industry": "Technology",
+      "established_year": 2025
+  },
+  {
+      "name": "Nerd iQ Ltd",
+      "address": "MSU, Gweru, Zimbabwe",
+      "phone": "+263 (03) 56739",
+      "website": "https://nerdiq.com",
+      "image": "nerdiq.png",
+      "membership_level": 2,
+      "industry": "Technology",
+      "established_year": 2020
+  },
+  {
+      "name": "Tech Fix Ltd",
+      "address": "MSU, Gweru, Zimbabwe",
+      "phone": "+263 04 789654",
+      "website": "https://techfix.com",
+      "image": "tech_fix.png",
+      "membership_level": 1,
+      "industry": "Technology",
+      "established_year": 2005
+  },
+  {
+      "name": "Green Energy Solutions",
+      "address": "456 Renewable Street, Bulawayo, Zimbabwe",
+      "phone": "+263 29 5678901",
+      "website": "https://greenenergy.com",
+      "image": "green_energy.png",
+      "membership_level": 2,
+      "industry": "Renewable Energy",
+      "established_year": 2018
+  },
+  {
+      "name": "Smart Builders Ltd",
+      "address": "789 Construction Ave, Harare, Zimbabwe",
+      "phone": "+263 24 5689002",
+      "website": "https://smartbuilders.com",
+      "image": "smart_builders.png",
+      "membership_level": 3,
+      "industry": "Construction",
+      "established_year": 2010
+  },
+  {
+      "name": "Innovate Tech Africa",
+      "address": "202 Innovation Park, Harare, Zimbabwe",
+      "phone": "+263 77 1234567",
+      "website": "https://innovatetechafrica.com",
+      "image": "innovate_tech.png",
+      "membership_level": 3,
+      "industry": "Software Development",
+      "established_year": 2015
+  }
 ]

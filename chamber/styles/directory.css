@@ -293,3 +293,45 @@ button {
     }
 
 }
+
+#spotlight-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.spotlight-card {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.spotlight-card img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.spotlight-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.spotlight-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.spotlight-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #005f73;
+    font-weight: bold;
+}

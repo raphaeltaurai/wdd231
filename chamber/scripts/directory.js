@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.toggle("open");
     });
 
-    // Load members
+    // Load members and spotlight members
     fetchMembers();
+    fetchSpotlightMembers();
 
     // View toggle functionality
     document.getElementById("grid-view").addEventListener("click", () => {
@@ -26,9 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Fetch and display members
 async function fetchMembers() {
-    const response = await fetch("data/members.json");
-    const members = await response.json();
-    displayMembers(members);
+    try {
+        const response = await fetch("data/members.json");
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        console.error("Failed to fetch members:", error);
+    }
 }
 
 function displayMembers(members) {
@@ -40,7 +45,7 @@ function displayMembers(members) {
         card.classList.add("member-card");
 
         card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" width="150">
+            <img src="images/${member.image}" alt="${member.name}" width="150">
             <h2>${member.name}</h2>
             <p>${member.address}</p>
             <p>${member.phone}</p>
@@ -50,9 +55,49 @@ function displayMembers(members) {
     });
 }
 
+// Fetch and display spotlight members
+async function fetchSpotlightMembers() {
+    try {
+        const response = await fetch("data/members.json");
+        const members = await response.json();
+        const spotlightContainer = document.getElementById("spotlight-members");
+        spotlightContainer.innerHTML = "";
+
+        // Filter for Gold (3) or Silver (2) members
+        const eligibleMembers = members.filter(member => member.membership_level === 3 || member.membership_level === 2);
+        
+        if (eligibleMembers.length === 0) {
+            spotlightContainer.innerHTML = "<p>No spotlight members available.</p>";
+            return;
+        }
+
+        // Shuffle and select 2-3 members randomly
+        const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
+        const selectedSpotlights = shuffled.slice(0, 3);
+
+        selectedSpotlights.forEach(member => {
+            const spotlightCard = document.createElement("div");
+            spotlightCard.classList.add("spotlight-card");
+
+            spotlightCard.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name}" width="150">
+                <h2>${member.name}</h2>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p class="membership-level">Membership Level: ${member.membership_level}</p>
+            `;
+            spotlightContainer.appendChild(spotlightCard);
+        });
+    } catch (error) {
+        console.error("Failed to fetch spotlight members:", error);
+    }
+}
+
+// Weather API
 const apiKey = "d7b550e8f4fcd45a1601942facd66407"; // OpenWeatherMap API key
-const city = "Kwekwe"; // chamber's location
-const countryCode = "ZW"; // country code
+const city = "Kwekwe"; // Chamber's location
+const countryCode = "ZW"; // Country code
 
 async function fetchWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
@@ -60,7 +105,7 @@ async function fetchWeather() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        const iconsrc = `https://openweathermap.org/img/w/${data.weather[0]}.png`;
+        const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
         document.querySelector("#city-details .card:nth-child(2)").innerHTML = `
             <h3>Current Weather</h3>
             <p>Temperature: ${data.main.temp}°C</p>
@@ -96,8 +141,7 @@ async function fetchWeatherForecast() {
 fetchWeather();
 fetchWeatherForecast();
 
-
-//navigation
+// Navigation highlighting
 document.addEventListener("DOMContentLoaded", function () {
     const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll(".nav-links a").forEach(link => {
