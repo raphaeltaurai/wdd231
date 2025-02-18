@@ -1,4 +1,8 @@
 /* Add these styles at the top of the file */
+*{
+    font-weight: bold;
+}
+
 main h1 {
     text-align: center;
     color: #333;
