@@ -1,0 +1,52 @@
+{
+    "attractions": [
+        {
+            "title": "Kwekwe Mosque",
+            "image": "mosque.webp",
+            "address": "Rbrt Mugabe way , Kwekwe, Zimbabwe",
+            "description": "Historic mosque and center of Islamic learning, Kwekwe"
+        },
+        {
+            "title": "Cactus",
+            "image": "cactus.webp",
+            "address": "Redcliff Kwekwe, Zimbabwe",
+            "description": "Dam view resort"
+        },
+        {
+            "title": "Redcliff Council Offices",
+            "image": "redMin.webp",
+            "address": "Redcliff Council Offices, Kwekwe, Zimbabwe",
+            "description": "City Council Offices"
+        },
+        {
+            "title": "Sebakwe Park",
+            "image": "sebpark.webp",
+            "address": "Munyati, Kwekwe, Zimbabwe",
+            "description": "Sable Park log house"
+        },
+        {
+            "title": "Zimasco",
+            "image": "zimasco.webp",
+            "address": "Mbizo road, Kwekwe, Zimbabwe",
+            "description": "Chrome manufacturing industrial site"
+        },
+        {
+            "title": "Kwekwe City View",
+            "image": "zimasco.webp",
+            "address": "Kwekwe, Zimbabwe",
+            "description": "whole city view of Kwekwe"
+        },
+        {
+            "title": "Manuscript Museum",
+            "image": "town.webp",
+            "address": "Heritage District, Kwekwe, Zimbabwe",
+            "description": "Kwekwe Museum"
+        },
+        {
+            "title": "Zim Flag",
+            "image": "zim-fly-flag.jpg",
+            "address": "Any registered school or company, Kwekwe, Zimbabwe",
+            "description": "Each place with the Zimbabwean flag is considered an attraction."
+        }
+    ]
+} 
