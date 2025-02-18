@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Join Our Kanyama Chamber of Commerce">
+    <meta name="author" content="Raphael Shawn Taurai">
+    <title>Join our | Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Meta (Facebook Sharing) -->
+    <meta property="og:title" content="Join our Kanyama Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raphaeltaurai.github.io/wdd231/chamber/images/zim-fly-flag.jpg">
+    <meta property="og:url" content="https://raphaeltaurai.github.io/wdd231/chamber/directory.html">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalise.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/join.js" defer></script>
+    
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="page-name">
+                <h1>Chamber Join Page</sub></h1>
+            </div>
+            <button id="hamburger-btn" aria-label="Menu">☰</button>
+            <nav id="primary-nav">
+                <ul class="breadcrumb">
+                    <li class="nav-links"><a class="aa" href="index.html">Home</a></li>
+                    <li class="nav-links"><a class="aa" href="directory.html">Directory</a></li>
+                    <li class="nav-links"><a class="aa" href="join.html">Join</a></li>
+                    <li class="nav-links"><a class="aa" href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Membership Form</h2>
+        <section class="form-section">
+            
+            <form method="get" action="thankyou.html">
+                <label>
+                    First Name:
+                    <input type="text" name="first_name" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="last_name" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" name="organization_title" title="Enter your organizational title" autocomplete="organization-title" 
+                           pattern="[A-Za-z\-\s]{7,}" required>
+                </label>
+
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile number" autocomplete="tel" required>
+                </label>
+
+                <label>
+                    Business/Organization Name:
+                    <input type="text" name="organization_name" title="Enter your business or organization name" autocomplete="organization" required>
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membership_level" title="Select your membership level" required>
+                        <option value="NP">Non-Profit Membership (Free)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description:
+                    <textarea name="business_description" title="Describe your business" required></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+
+                <button type="submit">Join the Chamber</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>Non-Profit Membership</h3>
+                <button onclick="showModal('np-modal')">Learn More</button>
+            </div>
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <button onclick="showModal('bronze-modal')">Learn More</button>
+            </div>
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <button onclick="showModal('silver-modal')">Learn More</button>
+            </div>
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <button onclick="showModal('gold-modal')">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div class="modal" id="np-modal">
+            <div class="modal-content">
+                <h4>Non-Profit Membership Benefits</h4>
+                <p>Free membership for non-profit organizations. Includes event access and basic directory listing.</p>
+                <button onclick="closeModal('np-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="bronze-modal">
+            <div class="modal-content">
+                <h4>Bronze Membership Benefits</h4>
+                <p>Includes event discounts and marketing resources.</p>
+                <button onclick="closeModal('bronze-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="silver-modal">
+            <div class="modal-content">
+                <h4>Silver Membership Benefits</h4>
+                <p>Includes all Bronze benefits plus training and networking opportunities.</p>
+                <button onclick="closeModal('silver-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="gold-modal">
+            <div class="modal-content">
+                <h4>Gold Membership Benefits</h4>
+                <p>Includes all Silver benefits plus premium advertising and spotlight positions.</p>
+                <button onclick="closeModal('gold-modal')">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <strong>Raphael Shawn Taurai</strong>
+                <p>Kwekwe, Zimabwe </p>
+                <p>Email: shawntaurai123@email.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/raphaelshawn.taurai"><img src="../images/youtube.png" alt="YouTube"></a>
+                <a href="https://x.com/TaurShawn"><img src="../images/twitter.png" alt="X"></a>
+                <a href="https://www.linkedin.com/in/raphaelshawntaurai/"><img src="../images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-right">
+                <p>WDD231 Class Project</p>
+                <p>&copy; <span id="current-year"></span> Raphael Shawn Taurai</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
