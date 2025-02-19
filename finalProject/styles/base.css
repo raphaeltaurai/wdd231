@@ -1,0 +1,206 @@
+:root {
+    --headings: #005f73ff;
+    --background: #def0ea;
+    --black: #000;
+    --white: #fff;
+    --grey: #ffffff33;
+    --yellow: #ffd000d7; 
+}
+
+html{
+    background-color: var(--background);
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.page-name{
+    display:flex;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--headings);
+    color: var(--white);
+}
+
+#logo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 62px;
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    -ms-border-radius: 62px;
+    -o-border-radius: 62px;
+}
+
+/* h1 {
+    margin: 0;
+} */
+
+#hamburger-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--white); 
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Wayfinding: Highlight active page */
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--yellow); /* Adjust to match your theme */
+}
+
+/* Ensure active state remains visible */
+.nav-links a.active:hover {
+    background-color: transparent;
+}
+
+/* Hover effect for navigation */
+.nav-links a:hover {
+    background-color: var(--grey);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    #hamburger-btn {
+        display: block;
+    }
+    
+    #primary-nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--headings);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    #primary-nav.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+
+    .hero{
+        margin-top: 200px;
+    }
+}
+
+/*End of Header on mobile*/
+
+/*Footer*/
+footer {
+    color: white;
+    background-color: #005f73;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: block;
+}
+
+.contact-info, .footer-right {
+    text-align: left;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/*make icons react to hover*/
+.social-icons a img:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+/*Footer Done*/
+
+
+@media (min-width: 768px){
+
+    .breadcrumb {
+        justify-content: space-around;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .nav-links a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+        /* Ensure active state remains visible */
+    .nav-links a.active:hover {
+        background-color: transparent;
+    }
+
+    /* Hover effect for navigation */
+    .nav-links a:hover {
+        background-color: var(--grey);
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+    }
+}

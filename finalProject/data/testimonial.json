@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Tatenda Moyo",
+      "testimonial": "This service exceeded my expectations! Highly recommended.",
+      "source": "Facebook",
+      "icon": "facebook.png"
+    },
+    {
+      "name": "Ruvimbo Ndlovu",
+      "testimonial": "Amazing experience! The team was very professional and helpful.",
+      "source": "LinkedIn",
+      "icon": "linkedin.png"
+    },
+    {
+      "name": "Tawanda Chikore",
+      "testimonial": "Great quality and outstanding support. Would use again!",
+      "source": "Twitter",
+      "icon": "twitter.png"
+    },
+    {
+      "name": "Chiedza Dube",
+      "testimonial": "Absolutely loved it! Will be telling all my friends about this.",
+      "source": "Facebook",
+      "icon": "facebook.png"
+    },
+    {
+      "name": "Farai Nyoni",
+      "testimonial": "Fantastic customer service and excellent value!",
+      "source": "LinkedIn",
+      "icon": "linkedin.png"
+    },
+    {
+      "name": "Simba Mhondoro",
+      "testimonial": "I had a seamless experience. Everything was top-notch!",
+      "source": "Twitter",
+      "icon": "twitter.png"
+    }
+  ]

@@ -1,0 +1,44 @@
+[
+    {
+        "image": "homeCleaning.webp",
+        "name": "Home Cleaning",
+        "description": "Thorough cleaning of your home.",
+        "price": "$40",
+        "category": "Basic"
+    },
+    {
+        "image": "office.webp",
+        "name": "Office Cleaning",
+        "description": "Professional cleaning for your office.",
+        "price": "$50",
+        "category": "Basic"
+    },
+    {
+        "image": "bathroomCleaning.webp",
+        "name": "Bathroom Cleaning",
+        "description": "In-depth bathroom cleaning for your space.",
+        "price": "$30",
+        "category": "Stand-alone"
+    },
+    {
+        "image": "kitchen.webp",
+        "name": "Kitchen Cleaning",
+        "description": "Kitchen only deep clean",
+        "price": "$30",
+        "category": "Stand-alone"
+    },
+    {
+        "image": "kitchen2.webp",
+        "name": "Dishes",
+        "description": "Washing of dishes and kitchen laundry",
+        "price": "$20",
+        "category": "Add-on"
+    },
+    {
+        "image": "garage.webp",
+        "name": "Garage Cleaning",
+        "description": "In-depth cleaning for garage and tool shelving spaces.",
+        "price": "$45",
+        "category": "Stand-alone"
+    }
+]
