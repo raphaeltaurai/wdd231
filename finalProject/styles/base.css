@@ -1,3 +1,6 @@
+/* Import a professional, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 :root {
     --headings: #005f73ff;
     --background: #def0ea;
@@ -14,6 +17,8 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    font-family: 'Inter', sans-serif; /* Apply to all unassigned text */
+    font-weight: 400; /* Default weight for readability */
 }
 
 .page-name{
@@ -36,15 +41,7 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 62px;
-    -webkit-border-radius: 62px;
-    -moz-border-radius: 62px;
-    -ms-border-radius: 62px;
-    -o-border-radius: 62px;
 }
-
-/* h1 {
-    margin: 0;
-} */
 
 #hamburger-btn {
     font-size: 1.5rem;
@@ -72,29 +69,25 @@ nav ul li {
     text-align: center;
     padding: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600; /* Enhance visibility in navigation */
 }
 
-/* Wayfinding: Highlight active page */
 .nav-links a.active {
     font-weight: bold;
     text-decoration: underline;
-    color: var(--yellow); /* Adjust to match your theme */
+    color: var(--yellow);
 }
 
-/* Ensure active state remains visible */
 .nav-links a.active:hover {
     background-color: transparent;
 }
 
-/* Hover effect for navigation */
 .nav-links a:hover {
     background-color: var(--grey);
     padding: 1rem;
     border-radius: 5px;
 }
 
-/* Responsive Navigation */
 @media (max-width: 768px) {
     #hamburger-btn {
         display: block;
@@ -123,18 +116,15 @@ nav ul li {
         margin: 5px 0;
     }
 
-
     .hero{
         margin-top: 200px;
     }
 }
 
-/*End of Header on mobile*/
-
-/*Footer*/
+/* Footer */
 footer {
     color: white;
-    background-color: #005f73;
+    background-color: var(--headings);
     padding: 20px;
     text-align: center;
     font-size: 14px;
@@ -153,17 +143,13 @@ footer {
     margin: 0 5px;
 }
 
-/*make icons react to hover*/
+/* Make icons react to hover */
 .social-icons a img:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-
-/*Footer Done*/
-
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 @media (min-width: 768px){
-
     .breadcrumb {
         justify-content: space-around;
     }
@@ -183,12 +169,10 @@ footer {
         text-decoration: none;
     }
 
-        /* Ensure active state remains visible */
     .nav-links a.active:hover {
         background-color: transparent;
     }
 
-    /* Hover effect for navigation */
     .nav-links a:hover {
         background-color: var(--grey);
         padding: 1rem;
@@ -203,4 +187,17 @@ footer {
         max-width: 1000px;
         margin: auto;
     }
+}
+
+/* Ensure typography consistency */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Make headings bold and professional */
+}
+
+p, a, span {
+    font-weight: 400; /* Ensure readability for body text */
+}
+
+.testimonial-text {
+    font-weight: 500; /* Make testimonials stand out */
 }
